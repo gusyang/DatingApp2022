@@ -19,6 +19,7 @@ namespace API.Extensions
             {
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<LogUserActivity>();
             return services;
         }
         
